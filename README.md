@@ -2,6 +2,7 @@
 
 Simple ERC20 token project with a tiny frontend that connects to MetaMask, shows balances and sends ETH/ERC20.
 
+
 Made by kganya mayeza.
 
 ## Quick start
