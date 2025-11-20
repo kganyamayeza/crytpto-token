@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Token Starter — made by kganya mayeza</title>
+  <meta name="description" content="Connect MetaMask, view ETH/ERC20 balances and transfer tokens. Theme: black/blue/purple." />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Token Starter</h1>
+      <p class="subtitle">Connect MetaMask · View balances · Send ETH / ERC‑20</p>
+    </header>
+
+    <section class="wallet card">
+      <button id="btnConnect" class="btn">Connect MetaMask</button>
+      <div id="accountInfo" class="hidden info">
+        <div>Address: <span id="addr">—</span></div>
+        <div>Network: <span id="network">—</span></div>
+        <div>ETH Balance: <span id="ethBalance">—</span></div>
+      </div>
+    </section>
+
+    <section class="transfer card">
+      <h2>Transfer</h2>
+      <label>Token type
+        <select id="tokenType">
+          <option value="ETH">ETH</option>
+          <option value="ERC20">ERC-20</option>
+        </select>
+      </label>
+
+      <div id="erc20Fields" class="hidden">
+        <label>Token contract address
+          <input id="tokenAddress" placeholder="0x..." />
+        </label>
+        <div class="examples">
+          Example tokens: <button class="small" data-address="0x6B175474E89094C44Da98b954EedeAC495271d0F">DAI</button>
+          <button class="small" data-address="0xA0b86991c6218b36c1d19d4a2e9eb0ce3606eb48">USDC</button>
+        </div>
+        <div id="tokenMeta">Token: <span id="tkName">—</span> (<span id="tkSymbol">—</span>) Balance: <span id="tkBalance">—</span></div>
+      </div>
+
+      <label>To
+        <input id="to" placeholder="0x recipient address" />
+      </label>
+
+      <label>Amount
+        <input id="amount" placeholder="0.01" />
+      </label>
+
+      <div class="actions">
+        <button id="btnSend" class="btn primary">Send</button>
+        <div id="status" class="status">ready</div>
+      </div>
+    </section>
+
+    <footer class="credit">made by kganya mayeza</footer>
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
